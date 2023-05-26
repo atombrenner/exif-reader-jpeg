@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "description": "read and parse exif metadata from jpeg files",
   "main": "index.js",
+  "types": "index.d.ts",
   "engines": {
     "node": ">=16",
     "npm": ">=8"
   },
   "scripts": {
-    "test": "node --test"
+    "test": "node --test && npx tsd"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,9 @@
   },
   "homepage": "https://github.com/atombrenner/exif-reader-jpeg#readme",
   "devDependencies": {
+    "@types/node": ">=16.x",
     "prettier": "^2.8.8",
+    "tsd": "^0.28.1",
     "typescript": "^5.0.4"
   },
   "dependencies": {
