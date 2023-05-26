@@ -1,0 +1,35 @@
+{
+  "name": "@atombrenner/exif-reader-jpeg",
+  "version": "0.1.0",
+  "description": "read and parse exif metadata from jpeg files",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atombrenner/exif-reader-jpeg.git"
+  },
+  "keywords": [
+    "exif",
+    "jpeg",
+    "metadata"
+  ],
+  "author": "Christian Rodemeyer",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/atombrenner/exif-reader-jpeg/issues"
+  },
+  "homepage": "https://github.com/atombrenner/exif-reader-jpeg#readme",
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "exif-reader": "^1.2.0"
+  }
+}
