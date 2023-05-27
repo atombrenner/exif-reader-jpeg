@@ -1,5 +1,5 @@
 const { open } = require('node:fs/promises')
-const parseExifBuffer = require('exif-reader')
+const parseExifBuffer = require('@atombrenner/exif-reader')
 
 // see https://en.wikipedia.org/wiki/JPEG_File_Interchange_Format for details of jpeg file format
 

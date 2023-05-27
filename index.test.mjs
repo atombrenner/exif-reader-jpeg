@@ -61,6 +61,6 @@ describe('readExifBufferStream', () => {
 
 it('readExifData should return parsed metadata from a jpeg file', async () => {
   const exif = await readExifData('test.jpg')
-  assert.ok(exif.exif.DateTimeOriginal instanceof Date, 'Date expected')
-  assert.equal(exif.exif.DateTimeOriginal.toISOString(), '2000-01-02T03:04:05.000Z')
+  assert.ok(exif.Photo.DateTimeOriginal instanceof Date, 'Date expected')
+  assert.equal(exif.Photo.DateTimeOriginal.toISOString(), '2000-01-02T03:04:05.000Z')
 })
