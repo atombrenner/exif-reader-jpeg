@@ -1,6 +1,6 @@
 {
   "name": "@atombrenner/exif-reader-jpeg",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "read and parse exif metadata from jpeg files",
   "main": "index.js",
   "types": "index.d.ts",
