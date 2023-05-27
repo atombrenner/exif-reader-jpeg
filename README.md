@@ -38,8 +38,14 @@ Example Output:
 
 ## Implementation Details
 
-This is a companion to the [exif-reader package](https://www.npmjs.com/package/exif-reader). `exif-reader` parses a `Buffer` with raw Exif data and returns an object with metadata. So you need another mechanism to get the Buffer from
-a file. This package reads and parses the Exif data from a jpeg file in one step.
+This is a companion to the [exif-reader package](https://www.npmjs.com/package/exif-reader).
+It parses a `Buffer` with raw Exif data and returns an object with metadata.
+You need to extract the raw metadata from a file on your own,
+e.g. with [sharp](https://www.npmjs.com/package/sharp)'s metadata function.
+This package reads and parses the Exif data from a jpeg file in one step.
 
-- `readExifData` returns the parsed metadata
-- use `readExifBuffer` if you are interested in the unparsed Exif Buffer
+`readExifData(pathOrStream: string | NodeJS.ReadableStream)` returns the parsed Exif metadata.
+Note that streaming performs 4 times slower than the file version. The reason is that
+streaming is reading the whole file, while the file version can read only the blocks with the metadata.
+
+Use `readExifBufferFile` or `readExifBufferStream` if you are interested in the unparsed Exif Buffer.

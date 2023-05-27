@@ -1,5 +1,5 @@
 // this is a index.d.ts test handled by [tsd](https://github.com/SamVerschueren/tsd#readme)
-import { readExifData, readExifBuffer } from '.'
+import { readExifData, readExifBufferFile, readExifBufferStream } from '.'
 import { Readable } from 'node:stream'
 import { expectType, expectError } from 'tsd'
 
@@ -15,5 +15,5 @@ expectError(fromStream.doesNotExist) // should be highlighted as an error in IDE
 expectType<boolean>(fromStream.bigEndian)
 expectType<Record<string, any>>(fromStream.image)
 
-expectType<Promise<Buffer>>(readExifBuffer('some.jpg'))
-expectType<Promise<Buffer>>(readExifBuffer(Readable.from([])))
+expectType<Promise<Buffer>>(readExifBufferStream(Readable.from([])))
+expectType<Promise<Buffer>>(readExifBufferFile('some.jpg'))

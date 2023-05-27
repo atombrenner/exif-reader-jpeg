@@ -1,5 +1,3 @@
-//import { Readable } from 'node:stream'
-
 export const readExifData: (pathOrStream: string | NodeJS.ReadableStream) => Promise<{
   bigEndian: boolean
   image: Record<string, any>
@@ -7,4 +5,5 @@ export const readExifData: (pathOrStream: string | NodeJS.ReadableStream) => Pro
   exif: Record<string, any>
 }>
 
-export const readExifBuffer: (pathOrStream: string | NodeJS.ReadableStream) => Promise<Buffer>
+export const readExifBufferFile: (path: string) => Promise<Buffer>
+export const readExifBufferStream: (stream: NodeJS.ReadableStream) => Promise<Buffer>
