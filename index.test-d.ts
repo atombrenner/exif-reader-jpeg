@@ -2,7 +2,7 @@
 import { readExifData, readExifBufferFile, readExifBufferStream } from '.'
 import { Readable } from 'node:stream'
 import { expectType, expectError } from 'tsd'
-import type { Exif } from '@atombrenner/exif-reader'
+import type { Exif } from 'exif-reader'
 
 const fromFile = await readExifData('some.jpg')
 expectError(fromFile.doesNotExist) // should be highlighted as an error in IDE but handled by tsd

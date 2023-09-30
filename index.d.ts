@@ -1,4 +1,4 @@
-import type { Exif } from '@atombrenner/exif-reader'
+import type { Exif } from 'exif-reader'
 
 export const readExifData: (pathOrStream: string | NodeJS.ReadableStream) => Promise<Exif>
 
