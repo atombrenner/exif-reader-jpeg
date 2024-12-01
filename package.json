@@ -36,10 +36,10 @@
   "devDependencies": {
     "@types/node": ">=16.x",
     "prettier": "^3.0.3",
-    "tsd": "^0.29.0",
+    "tsd": "^0.31.2",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "exif-reader": "2.0.0"
+    "exif-reader": "^2.0.0"
   }
 }
