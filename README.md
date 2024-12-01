@@ -107,8 +107,9 @@ You need to extract the raw metadata from a file on your own,
 e.g. with [sharp](https://www.npmjs.com/package/sharp)'s metadata function.
 This package reads and parses the Exif data from a jpeg file in one step.
 
-`readExifData(pathOrStream: string | NodeJS.ReadableStream)` returns the parsed Exif metadata.
-Note that streaming performs 4 times slower than the file version. The reason is that
-streaming is reading the whole file, while the file version can read only the blocks with the metadata.
+`readExifData(path: string): Promise<Exif>` returns the parsed Exif metadata by reading a file.
 
-Use `readExifBufferFile` or `readExifBufferStream` if you are interested in the unparsed Exif Buffer.
+`readExifData(stream: NodeJS.ReadableStream): Promise<Exif>` reads the parsed Exif metadata from a stream.
+Warning: this performs 4 times slower than the file version. We need to read the entire stream
+into memory before we can search for the metadata, while the file access version can skip
+reading data and will only read metadata bytes.
